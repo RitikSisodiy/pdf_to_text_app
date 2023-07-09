@@ -1,0 +1,1 @@
+gunicorn --bind unix:/sock/app.sock --timeout 300 --reload app:app

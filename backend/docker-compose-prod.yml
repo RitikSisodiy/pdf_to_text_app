@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: app-backend
+    build: .
+    volumes:
+      - ./:/app
+      - static_volume:/app/staticfiles
+    networks:
+      - web_network
+    stdin_open: true
+    tty: true
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    restart: always
+    depends_on:
+      - web
+    volumes:
+      - ./nginx/nginx-prod.conf:/etc/nginx/conf.d/web.conf
+      - static_volume:/app/staticfiles
+    ports:
+      - "3800:80"
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge
+
+volumes:
+  static_volume:

@@ -1,0 +1,19 @@
+services:
+  web:
+    container_name: app-frondend
+    build: .
+    volumes:
+      - ./:/app
+      - static_volume:/app/build
+    networks:
+      - web_network
+    ports:
+      - '3000:3000'  # Adjust the port number as needed
+    stdin_open: true
+    tty: true
+networks:
+  web_network:
+    driver: bridge
+
+volumes:
+  static_volume:
