@@ -24,7 +24,7 @@ To run the application locally, follow these steps:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/ritiksisodiy/pdf-to-text-converter.git
+   [git clone https://github.com/ritiksisodiy/pdf-to-text-converter.git](https://github.com/RitikSisodiy/pdf_to_text_app.git)
    ``` 
 
 2.  Navigate to the project directory:
