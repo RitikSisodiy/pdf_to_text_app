@@ -15,7 +15,7 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
   ```
-   git clone https://github.com/your-username/pdf-to-text-project.git
+   git clone https://github.com/RitikSisodiy/pdf_to_text_app.git
    cd pdf-to-text-project
    ```
 2.  Install the required dependencies:
